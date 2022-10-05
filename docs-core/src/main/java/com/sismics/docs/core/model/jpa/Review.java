@@ -92,6 +92,10 @@ public class Review {
         return this.score;
     }
 
+    public String create(Review review, String id) {
+        return null;
+    }
+
     // @Override
     // public String toString() {
     //     return MoreObjects.toStringHelper(this)

@@ -5,6 +5,7 @@ import com.sismics.docs.core.constant.AuditLogType;
 import com.sismics.docs.core.dao.criteria.TagCriteria;
 import com.sismics.docs.core.dao.dto.TagDto;
 import com.sismics.docs.core.model.jpa.DocumentTag;
+import com.sismics.docs.core.model.jpa.Review;
 import com.sismics.docs.core.model.jpa.Tag;
 import com.sismics.docs.core.util.AuditLogUtil;
 import com.sismics.docs.core.util.SecurityUtil;
@@ -100,7 +101,7 @@ public class ReviewDao {
         // // Create audit log
         // AuditLogUtil.create(tag, AuditLogType.CREATE, userId);
         
-        return review.getId();
+        return review.getRevId();
     }
     
     /**

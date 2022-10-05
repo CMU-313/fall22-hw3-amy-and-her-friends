@@ -4,10 +4,12 @@ import com.google.common.collect.Sets;
 import com.sismics.docs.core.constant.AclType;
 import com.sismics.docs.core.constant.PermType;
 import com.sismics.docs.core.dao.AclDao;
+import com.sismics.docs.core.dao.ReviewDao;
 import com.sismics.docs.core.dao.TagDao;
 import com.sismics.docs.core.dao.criteria.TagCriteria;
 import com.sismics.docs.core.dao.dto.TagDto;
 import com.sismics.docs.core.model.jpa.Acl;
+import com.sismics.docs.core.model.jpa.Review;
 import com.sismics.docs.core.model.jpa.Tag;
 import com.sismics.docs.core.util.jpa.SortCriteria;
 import com.sismics.rest.exception.ClientException;
@@ -191,11 +193,12 @@ public class ReviewResource extends BaseResource {
         // Create the tag
         ReviewDao reviewDao = new ReviewDao();
         Review review = new Review();
-        review.setApplicant(name);
+        review.setApplicantName(name);
         review.setNotes(notes);
         review.setScore(score);
         review.setRevUserId(principal.getId());
-        String id = ReviewDao.create(tag, principal.getId());
+        String id = reviewDao.create(review, principal.getId());
+
         // // Create read ACL
         // AclDao aclDao = new AclDao();
         // Acl acl = new Acl();
