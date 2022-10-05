@@ -52,4 +52,27 @@ public class Review implements Loggable {
     @Column(name = "OVERALL_SCORE")
     private int score;
 
+    public String getRevId() {
+        return revId;
+    }
+
+    public String getRevDocId() {
+        return revDocId;
+    }
+
+    public String getRevUserId() {
+        return revUserId;
+    }
+
+
+
+    // @Override
+    // public String toString() {
+    //     return MoreObjects.toStringHelper(this)
+    //             .add("id", id)
+    //             .add("name", name)
+    //             .add("parentId", parentId)
+    //             .toString();
+    // }
+
 }
