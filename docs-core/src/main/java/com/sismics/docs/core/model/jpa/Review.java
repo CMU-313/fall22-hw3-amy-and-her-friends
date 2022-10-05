@@ -84,6 +84,14 @@ public class Review {
         return notes;
     }
 
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public int getScore() {
+        return this.score;
+    }
+
     // @Override
     // public String toString() {
     //     return MoreObjects.toStringHelper(this)
