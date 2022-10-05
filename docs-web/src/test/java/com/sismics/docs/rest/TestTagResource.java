@@ -1,4 +1,4 @@
-        package com.sismics.docs.rest;
+package com.sismics.docs.rest;
 
 import com.sismics.util.filter.TokenBasedSecurityFilter;
 import org.junit.Assert;

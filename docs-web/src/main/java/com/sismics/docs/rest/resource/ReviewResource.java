@@ -32,7 +32,7 @@ import java.util.Set;
  * 
  * @author bgamard
  */
-@Path("/form")
+@Path("/review")
 public class ReviewResource extends BaseResource {
     /**
      * Returns the list of all visible tags.
@@ -170,7 +170,7 @@ public class ReviewResource extends BaseResource {
     @PUT
     public Response add(
             @FormParam("name") String name,
-            @FormParam("score") Integer score,
+            @FormParam("score") String score,
             @FormParam("notes") String notes) {
         if (!authenticate()) {
             throw new ForbiddenClientException();

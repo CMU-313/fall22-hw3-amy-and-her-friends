@@ -50,7 +50,7 @@ public class Review {
      */
     @Id
     @Column(name = "OVERALL_SCORE")
-    private int score;
+    private String score;
 
     public void setRevId(String id) {
         this.revId = id;
@@ -84,11 +84,11 @@ public class Review {
         return notes;
     }
 
-    public void setScore(int score) {
+    public void setScore(String score) {
         this.score = score;
     }
 
-    public int getScore() {
+    public String getScore() {
         return this.score;
     }
 
