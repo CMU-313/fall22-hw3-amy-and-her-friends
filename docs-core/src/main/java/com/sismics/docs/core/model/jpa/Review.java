@@ -1,13 +1,13 @@
 package com.sismics.docs.core.model.jpa;
 
-import java.util.Date;
+// import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.google.common.base.MoreObjects;
+// import com.google.common.base.MoreObjects;
 
 /**
  * Review.
@@ -16,20 +16,13 @@ import com.google.common.base.MoreObjects;
  */
 @Entity
 @Table(name = "T_REVIEW")
-public class Review implements Loggable {
+public class Review {
     /**
      * Review ID
      */
     @Id
-    @Column(name = "REVIEW_ID", length = 36);
+    @Column(name = "REVIEW_ID", length = 36)
     private String revId;
-
-    /**
-     * Document ID
-     */
-    @Id
-    @Column(name = "REV_DOC_ID", nullable = false, length = 36)
-    private String revDocId;
 
     /**
      * Reviewer User ID
@@ -37,6 +30,13 @@ public class Review implements Loggable {
     @Id
     @Column(name = "REV_USE_ID", nullable = false, length = 36)
     private String revUserId;
+
+    /**
+     * Reviewed Name
+     */
+    @Id
+    @Column(name = "APPLICANT_NAME", nullable = false)
+    private String applicantName;
 
     /**
      * Notes
@@ -52,19 +52,37 @@ public class Review implements Loggable {
     @Column(name = "OVERALL_SCORE")
     private int score;
 
+    public void setRevId(String id) {
+        this.revId = id;
+    }
+
     public String getRevId() {
         return revId;
     }
 
-    public String getRevDocId() {
-        return revDocId;
+    public void setRevUserId(String id) {
+        this.revUserId = id;
     }
 
     public String getRevUserId() {
         return revUserId;
     }
 
+    public void setApplicantName(String name) {
+        this.applicantName = name;
+    }
 
+    public String getApplicantName() {
+        return applicantName;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
 
     // @Override
     // public String toString() {
