@@ -21,6 +21,7 @@ public class TestFormResource extends BaseJerseyTest {
      * Test the tag resource.
      */
     @Test
+//     comment
     public void testTagResource() {
         // Login tag1
         clientUtil.createUser("tag1");
