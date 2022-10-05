@@ -2,18 +2,27 @@
   <div class="col-md-4">
     <div class="well well-3d">
       <p class="input-group">
-        <span class="input-group-addon"><span class="fas fa-search"></span></span>
-        <input type="search" class="form-control" ng-attr-placeholder="{{ 'usergroup.search_groups' | translate }}" ng-model="searchGroup">
+        <span class="input-group-addon"
+          ><span class="fas fa-search"></span
+        ></span>
+        <input
+          type="search"
+          class="form-control"
+          ng-attr-placeholder="{{ 'usergroup.search_groups' | translate }}"
+          ng-model="searchGroup"
+        />
       </p>
 
       <table class="row table table-hover">
         <tbody>
-        <tr class="pointer" ng-repeat="group in groups | filter: searchGroup"
-            ng-click="openGroup(group)" ng-class="{ active: $stateParams.name == group.name }">
-          <td class="col-xs-4">
-            {{ group.name }}
-          </td>
-        </tr>
+          <tr
+            class="pointer"
+            ng-repeat="group in groups | filter: searchGroup"
+            ng-click="openGroup(group)"
+            ng-class="{ active: $stateParams.name == group.name }"
+          >
+            <td class="col-xs-4">{{ group.name }}</td>
+          </tr>
         </tbody>
       </table>
 
@@ -24,20 +33,35 @@
 
     <div class="well well-3d">
       <p class="input-group">
-        <span class="input-group-addon"><span class="fas fa-search"></span></span>
-        <input type="search" class="form-control" ng-attr-placeholder="{{ 'usergroup.search_users' | translate }}" ng-model="searchUser">
+        <span class="input-group-addon"
+          ><span class="fas fa-search"></span
+        ></span>
+        <input
+          type="search"
+          class="form-control"
+          ng-attr-placeholder="{{ 'usergroup.search_users' | translate }}"
+          ng-model="searchUser"
+        />
       </p>
 
       <table class="row table table-hover">
         <tbody>
-        <tr class="pointer" ng-repeat="user in users | filter: searchUser"
-            ng-click="openUser(user)" ng-class="{ active: $stateParams.username == user.username }">
-          <td class="col-xs-4">
-            <span class="fas fa-user"></span>
-            {{ user.username }}
-            <span class="text-muted" ng-if="userInfo.username == user.username">{{ 'usergroup.you' | translate }}</span>
-          </td>
-        </tr>
+          <tr
+            class="pointer"
+            ng-repeat="user in users | filter: searchUser"
+            ng-click="openUser(user)"
+            ng-class="{ active: $stateParams.username == user.username }"
+          >
+            <td class="col-xs-4">
+              <span class="fas fa-user"></span>
+              {{ user.username }}
+              <span
+                class="text-muted"
+                ng-if="userInfo.username == user.username"
+                >{{ 'usergroup.you' | translate }}</span
+              >
+            </td>
+          </tr>
         </tbody>
       </table>
 
@@ -45,6 +69,65 @@
         <span class="fas fa-user"></span>
       </div>
     </div>
+    <!-- <div style="background: blue; height: 100px; height: 1000px"></div> -->
+    <form class="form-horizontal" name="editTagForm" novalidate>
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="inputName"
+          >Applicant Name</label
+        >
+
+        <div class="col-sm-6">
+          <input
+            type="text"
+            name="ApplicantName"
+            class="form-control"
+            id="inputApplicantName"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="inputName">Notes</label>
+
+        <div class="col-sm-6">
+          <textarea
+            name="Notes"
+            class="form-control"
+            rows="8"
+            id="inputNotes"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="inputParent">Score</label>
+
+        <div class="col-sm-6">
+          <select class="form-control" id="inputParent">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="1">2</option>
+            <option value="1">3</option>
+            <option value="1">4</option>
+            <option value="1">5</option>
+            <option value="1">6</option>
+            <option value="1">7</option>
+            <option value="1">8</option>
+            <option value="1">9</option>
+            <option value="1">10</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-primary">
+            <span class="fas fa-pencil-alt"></span> Submit
+          </button>
+        </div>
+      </div>
+    </form>
   </div>
 
   <div class="col-md-8">
