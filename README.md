@@ -1,4 +1,5 @@
 ![Open in Codespaces](https://classroom.github.com/assets/open-in-codespaces-abfff4d4e15f9e1bd8274d9a39a0befe03a0632bb0f153d0ec72ff541cedbe34.svg)
+
 <h3 align="center">
   <img src="https://teedy.io/img/github-title.png" alt="Teedy" width=500 />
 </h3>
@@ -39,7 +40,6 @@ Teedy is an open source, lightweight document management system for individuals 
 - Fully featured Android client
 - [Bulk files importer](https://github.com/sismics/docs/tree/master/docs-importer) (single or scan mode)
 - Tested to one million documents
-
 
 # Native Installation
 
@@ -123,6 +123,28 @@ mvn jetty:run
 ```
 
 **The default admin password is "admin". Don't forget to change it before going to production.**
+
+# Feature Documentation - Reviewers' Form for Scoring
+
+Feature: Form for Reviewers to Score Candidates
+
+How to Use:
+
+- On Teedy, navigate to the Users & Groups page using the top navigation bar
+- Reviewers can scroll down to fill in and submit a form (on bottom left of page) scoring a specific candidate
+- On the form, they fill in the fields (all String types) for:
+  - Applicant name (text field)
+  - Notes (text field)
+  - Score from 1-10 (dropdown)
+
+How to User Test:
+
+- Will have a facilitator from our team walk a participant of the user testing through a series of tasks
+- Tasks would include:
+  - Navigating to the correct form location
+  - Filling out the form to complete a review
+  - Submit the form
+- At the end, ask participants to talk about their user experience
 
 # License
 
