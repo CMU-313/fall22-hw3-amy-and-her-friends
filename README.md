@@ -124,7 +124,7 @@ mvn jetty:run
 
 **The default admin password is "admin". Don't forget to change it before going to production.**
 
-## Feature Documentation - Reviewers' Form for Scoring
+# Feature Documentation - Reviewers' Form for Scoring
 
 Feature: Form for Reviewers to Score Candidates
 
