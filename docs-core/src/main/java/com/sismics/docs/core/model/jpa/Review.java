@@ -96,13 +96,4 @@ public class Review {
         return null;
     }
 
-    // @Override
-    // public String toString() {
-    //     return MoreObjects.toStringHelper(this)
-    //             .add("id", id)
-    //             .add("name", name)
-    //             .add("parentId", parentId)
-    //             .toString();
-    // }
-
 }
