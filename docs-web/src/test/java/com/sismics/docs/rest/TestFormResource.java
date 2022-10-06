@@ -12,23 +12,23 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 /**
- * Test the tag resource.
+ * Test the review resource.
  * 
  * @author bgamard
  */
 public class TestFormResource extends BaseJerseyTest {
     /**
-     * Test the tag resource.
+     * Test the review resource.
      */
     @Test
 //     comment
-    public void testTagResource() {
+    public void testFormResource() {
         // Login tag1
         clientUtil.createUser("tag1");
         String tag1Token = clientUtil.login("tag1");
 
-        // Create a tag
-        JsonObject json = target().path("/form").request()
+        // Create a formm
+        JsonObject json = target().path("/review").request()
                 .cookie(TokenBasedSecurityFilter.COOKIE_NAME, tag1Token)
                 .put(Entity.form(new Form()
                         .param("name", "User1")
@@ -37,9 +37,9 @@ public class TestFormResource extends BaseJerseyTest {
                         , JsonObject.class);
         String user1Id = json.getString("id");
         Assert.assertNotNull(user1Id);
-        
-        // Create a tag
-        json = target().path("/form").request()
+
+        // Create a form
+        json = target().path("/review").request()
                 .cookie(TokenBasedSecurityFilter.COOKIE_NAME, tag1Token)
                 .put(Entity.form(new Form()
                         .param("name", "User1")
